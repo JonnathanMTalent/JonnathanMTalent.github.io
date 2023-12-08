@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es" data-dark>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="gif" href="portafolio/assets/images/control.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Ventas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.css"
+    />
+    <link
+      rel="stylesheet"
+      href="portafolio/manejo_del_dom/css/dom_ejercicios.css"
+    />
+  </head>
+
+  <body data-dark>
+    <header class="header">
+      <center>
+        <h1 class="animated-text">
+          Tienda Online El Hueco Medellín
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a
+            href=""
+            style="color: var(--main-color)"
+            target="_blank"
+            >Peliculas Play 4 y 5</a
+          >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a
+            href=""
+            style="color: var(--main-color)"
+            target="_blank"
+            >Consolas Play 4 y 5</a
+          >
+        </h1>
+      </center>
+    </header>
+    <button class="panel-btn hamburger hamburger--vortex" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <aside class="panel">
+      <nav class="menu">
+        <a href="#seccion12" data-scroll-spy>Próximamente</a>
+        <a href="#seccion16" data-scroll-spy>Videos de presentación</a>
+        <a href="#seccion10" data-scroll-spy>Busca tu juego</a>
+        <a href="#seccion3" data-scroll-spy>
+          Cuenta regresiva para nuevos juegos</a
+        >
+        <a href="#seccion4" data-scroll-spy>Hubica nuestra tienda</a>
+
+        <a href="#seccion9" data-scroll-spy>Tu hubicacion para el envío</a>
+        <a href="#seccion14" data-scroll-spy>Escríbenos para hacer un pedido</a>
+      </nav>
+    </aside>
+    <main>
+      <section id="seccion12" class="section" data-scroll-spy>
+        <div class="textBox">
+          <h1>Próximamente en nuestra tienda!</h1>
+          <div id="countdown"></div>
+          <div class="slider">
+            <div class="slider-slides">
+              <div class="slider-slide">
+                <!-- Sólo una de las div debe tener esta clase activa ya que es con la que va a empezar el Slide-->
+                <img
+                  src="./portafolio/assets/images/thereAuto3.jpg"
+                  alt="foto1"
+                />
+              </div>
+              <div class="slider-slide active">
+                <!-- Sólo una de las div debe tener esta clase activa ya que es con la que va a empezar el Slide-->
+                <img
+                  src="./portafolio/assets/images/fornite.webp"
+                  alt="foto2"
+                />
+              </div>
+              <div class="slider-slide">
+                <!-- Sólo una de las div debe tener esta clase activa ya que es con la que va a empezar el Slide-->
+                <img
+                  src="./portafolio/assets/images/horizonFondo.jpg"
+                  alt="foto3"
+                />
+              </div>
+              <div class="slider-slide">
+                <!-- Sólo una de las div debe tener esta clase activa ya que es con la que va a empezar el Slide-->
+                <img
+                  src="./portafolio/assets/images/godOfWarRaknarokFondo.jpg"
+                  alt="foto3"
+                />
+              </div>
+            </div>
+            <div class="slider-btns">
+              <a class="prev" href="#">&laquo;</a>
+              <a class="next" href="#">&raquo;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="seccion16" class="section iframe-contenedor" data-scroll-spy>
+        <div class="textBox iframe-contenedor adjust">
+          <h1>Trailers de juegos:</h1>
+          <!-- Lista desplegable con opciones de videos -->
+          <select id="videoSelect" class="transparent-input">
+            <option>Selecciona un video</option>
+            <option
+              value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/mHDEDDrGYvo" title="Call of duty" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+            >
+              Call of Duty
+            </option>
+            <option
+              value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/A0y_X1_nc68" title="Node, express, javaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+            >
+              Final Fantasy
+            </option>
+            <option
+              value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/HaS31W3tS-w" title="React, framework Vite" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+            >
+              Grand There Autho
+            </option>
+            <option
+              value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/mfnc4_LCPNg" title="Java" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+            >
+              Wolverine
+            </option>
+            <option
+              value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/rRkavvt5x8o" title="SQL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+            >
+              MortalKombat 1
+            </option>
+            <option
+              value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/L30zvMbVJlM" title="Mongoose" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+            >
+              Fifa 24
+            </option>
+            <option
+              value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/aSsQ-iQdovM" title="Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+            >
+              Avengers
+            </option>
+            <option
+              value='<iframe class="iframe-responsivo" src="https://www.youtube.com/embed/S6GTl_vPRvU" title="Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+            >
+              Howards
+            </option>
+          </select>
+
+          <!-- Div para reproducir el video -->
+          <div id="videoContainer" class="div-iframe">
+            <!-- Aquí se cargará el video de YouTube -->
+          </div>
+        </div>
+
+
+        </div>
+      </section>
+      <section id="seccion11" class="section" data-scroll-spy>
+              <section id="seccion10" class="section" data-scroll-spy>
+        <div class="textBox">
+          <h2>Busca tu película! 🔎</h2>
+          <input
+            type="search,"
+            placeholder="Buscar..."
+            class="card-filter transparent-input"
+          />
+        </div>
+        <article class="cards">
+          <figure class="card rebotar">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/callDuty.JPG" alt="React" />
+              <figcaption>
+                <p class="p_card">Call of Duty</p>
+                <p class="p_card">$200.000</p>
+                <p class="p_card">Existencias: 2</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card rebotar">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img
+                src="portafolio/assets/images/FinalFantasy.JPG"
+                alt="javaScript"
+              />
+              <figcaption>
+                <p class="p_card">Finall Fantasy</p>
+                <p class="p_card">$180.000</p>
+                <p class="p_card">Existencias: 3</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card rebotar">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/goodOfWar.JPG" alt="NodeJS" />
+              <figcaption>
+                <p class="p_card">God of war</p>
+                <p class="p_card">$250.000</p>
+                <p class="p_card">Existencias: 2</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img
+                src="portafolio/assets/images/GrandthereAutho.JPG"
+                alt="SQL"
+              />
+              <figcaption>
+                <p class="p_card">Grand there autho</p>
+                <p class="p_card">$210.000</p>
+                <p class="p_card">Existencias: 4</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/avengers.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Avengers</p>
+                <p class="p_card">$208.000</p>
+                <p class="p_card">Existencias: 5</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/deadSpace.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Dead space</p>
+                <p class="p_card">$210.000</p>
+                <p class="p_card">Existencias: 3</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/fifa.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Fifa 24</p>
+                <p class="p_card">$280.000</p>
+                <p class="p_card">Existencias: 2</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/callOfDuty.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Call of Duty MW</p>
+                <p class="p_card">$260.000</p>
+                <p class="p_card">Existencias: 2</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/mortalKombat.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Mortal Kombat</p>
+                <p class="p_card">$280.000</p>
+                <p class="p_card">Existencias: 1</p>
+              </figcaption>
+            </a>
+          </figure>
+        </article>
+      </section>
+        <div class="textBox">
+          <h2>Busca tu película! 🔎</h2>
+          <input
+            type="search,"
+            placeholder="Buscar..."
+            class="card-filter transparent-input"
+          />
+        </div>
+        <article class="cards">
+          <figure class="card rebotar">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/callDuty.JPG" alt="React" />
+              <figcaption>
+                <p class="p_card">Call of Duty</p>
+                <p class="p_card">$200.000</p>
+                <p class="p_card">Existencias: 2</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card rebotar">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img
+                src="portafolio/assets/images/FinalFantasy.JPG"
+                alt="javaScript"
+              />
+              <figcaption>
+                <p class="p_card">Finall Fantasy</p>
+                <p class="p_card">$180.000</p>
+                <p class="p_card">Existencias: 3</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card rebotar">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/goodOfWar.JPG" alt="NodeJS" />
+              <figcaption>
+                <p class="p_card">God of war</p>
+                <p class="p_card">$250.000</p>
+                <p class="p_card">Existencias: 2</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img
+                src="portafolio/assets/images/GrandthereAutho.JPG"
+                alt="SQL"
+              />
+              <figcaption>
+                <p class="p_card">Grand there autho</p>
+                <p class="p_card">$210.000</p>
+                <p class="p_card">Existencias: 4</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/avengers.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Avengers</p>
+                <p class="p_card">$208.000</p>
+                <p class="p_card">Existencias: 5</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/deadSpace.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Dead space</p>
+                <p class="p_card">$210.000</p>
+                <p class="p_card">Existencias: 3</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/fifa.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Fifa 24</p>
+                <p class="p_card">$280.000</p>
+                <p class="p_card">Existencias: 2</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/callOfDuty.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Call of Duty MW</p>
+                <p class="p_card">$260.000</p>
+                <p class="p_card">Existencias: 2</p>
+              </figcaption>
+            </a>
+          </figure>
+          <figure class="card">
+            <a
+              href="./portafolio/manejo_del_dom/js/dom/formPago.html"
+              target="_blank"
+            >
+              <img src="portafolio/assets/images/mortalKombat.JPG" alt="SQL" />
+              <figcaption>
+                <p class="p_card">Mortal Kombat</p>
+                <p class="p_card">$280.000</p>
+                <p class="p_card">Existencias: 1</p>
+              </figcaption>
+            </a>
+          </figure>
+        </article>
+      </section>
+      <!-- <section id="seccion3" class="section" data-scroll-spy>
+        <div class="textBox">
+          <p id="reloj2" class="girar">⏳</p>
+
+          <h2>Cuenta regresiva para nuevos juegos</h2> -->
+      <!-- <form id="cuenta-regresiva" action="">
+            <input
+              class="transparent-input"
+              type="date"
+              name="fecha"
+              title="La fecha es requerida"
+              required
+            />
+
+            <input
+              class="transparent-input"
+              type="time"
+              name="hora"
+              title="La fecha es requerida"
+              required
+            />
+
+            <br />
+            <input class="blue-btn" type="submit" value="Calcular" />
+          </form> -->
+      <!-- <div id="countdown"></div> -->
+      <!-- </div>
+      </section> -->
+      <section id="seccion4" class="section" data-scroll-spy>
+        <div class="textBox">
+          <p id="celular" class="rebotar">📱</p>
+          <h2>Hubica nuestro negocio</h2>
+        </div>
+        <br />
+        <p class="textBox">🌎 Google maps de Medellín</p>
+        <div id="gmaps"></div>
+      </section>
+      <section id="seccion9" class="section" data-scroll-spy>
+        <div class="textBox">
+          <img src="../../assets/gif/earth.gif" alt="" id="mapaMundi" />
+          <h2>tu hubicación para el domicilio</h2>
+          <p>
+            Para ver esta funcionalidad es necesario que des permisos para
+            acceder a la ubicación.
+          </p>
+          <div id="geolocation"></div>
+        </div>
+      </section>
+
+      <section id="seccion14" class="section" data-scroll-spy>
+        <div class="textBox">
+          <img id="sonriza" src="../../assets/gif/guiño.gif" alt="" />
+          <h2>Escríbenos!</h2>
+          <h2>Cuales juegos quieres pedir?:</h2>
+          <!-- <form
+            class="contact-form"
+            action="https://formsubmit.co/jhonnnario@gmail.com"
+            method="POST"
+            target="_blank"
+          > -->
+          <form class="contact-form">
+            <!-- ! ESTE CODIGO DE ARRIBA ENVIA LOS DATOS DEL FORMULARIO  USANDO LA PAGIAN FORMSUBMIT-->
+
+            <!-- <legend>Envíame tus comentarios y sugerencias:</legend> -->
+            <!-- Importante no dejar espacios en el pattern de la expresion regular -->
+            <!-- El browser mostrara en las alertas lo que hay en el title -->
+            <!-- El required=required hace que solicite que el campo no este vacio. -->
+            <!-- pattern evalua una expresion regular o patron en el input -->
+            <input
+              type="text"
+              name="name"
+              placeholder="Escribe tu nombre"
+              title="El nombre sólo acepta letras y espacios en blanco"
+              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Escribe tu e-mail"
+              title="Email incorrecto"
+              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+              required
+            />
+
+            <input
+              type="text"
+              name="subject"
+              placeholder="Nombre del juego"
+              title="El nombre del juego es requerido"
+              required
+            />
+
+            <!-- como el textarea no acepta pattern se le inventó un atributo data pattern  -->
+            <textarea
+              name="comments"
+              cols="50"
+              rows="5"
+              placeholder="Especifica tu pedido aquí."
+              title="Tu comentario no debe exceder los 255 caracteres."
+              data-pattern="^.{1,255}$"
+              required
+            ></textarea>
+            <input id="send-blue" type="submit" value="Enviar" />
+            <div class="contact-form-loader none">
+              <img
+                src="./portafolio/assets/svg-loaders/ball-triangle.svg"
+                alt="Cargando"
+              />
+            </div>
+            <div class="contact-form-response none">
+              <p>Los datos han sido enviados</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <a
+      href="https://wa.me/573022264607?text=Hola%20me%20interesa%20tu%20trabajo!"
+      class="whatsapp girar"
+      target="_blank"
+      rel="noreferrer"
+    ></a>
+    <button class="scroll-top-btn hidden">&#11014;</button>
+    <button class="dark-theme-btn">🌌</button>
+    <script
+      src="portafolio/manejo_del_dom/js/index_dom.js"
+      type="module"
+    ></script>
+  </body>
+</html>
+
+<!-- // cambas, drag and drop y otras api de javaScript : cosas del front que puedo aprender -->

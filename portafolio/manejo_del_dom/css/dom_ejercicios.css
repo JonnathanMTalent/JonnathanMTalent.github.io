@@ -1,0 +1,947 @@
+/* ////INDICE */
+
+/* para usar este indice solo subrayar el renglon completo y dar ctrl+f para ir a ver la seccion: */
+
+/* *Body y variables */
+/* *menu-hamburguesa  ********************************************************************/
+/* *EVENTOS DEL TECLADO  *****************************************************************/
+/* *Scroll TopButton  ********************************************************************/
+/* *DarkThemeButton  *********************************************************************/
+/* *Network Status  **********************************************************************/
+/* *SearchFilters   TARJETAS DE IMÁGENES  ************************************************/
+/* *RESPONSIVE SLIDER  *******************************************************************/
+/* *@media screen  ***********************************************************************/
+/* *ScrollSpy  ***************************************************************************/
+/* *ContactForm Validations  *************************************************************/
+/* *IFRAME RESPONSIVO  *******************************************************************/
+/* *Animacion del texto en el Header  ****************************************************/
+/* *animacion de girar y rotar  *********************************************************/
+/* *EFECTO DE REVOTE:  *******************************************************************/
+/* *Estilos de el modal para explicar  ***************************************************/
+/* *Aspectos generales  ******************************************************************/
+
+/* *Body y variables */
+
+/*   Reset css  */
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+  /* --main-color: #bcdcf4; */
+  --main-color: rgba(68, 207, 73, 0.85);
+  /* --main-color: #65bd68; */
+  /* --main-color: white; */
+  --second-color: #222;
+  --third-color: rgb(55, 53, 53);
+  --black-transparent: rgba(0, 0, 0, 0.652);
+  --main-modal-color: rgba(68, 207, 73, 0.85);
+  --second-modal-color: rgba(34, 34, 34, 0.85);
+  --container-with: 1200px;
+}
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  color: white;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  /* background-color: rgb(142, 166, 227); */
+  background-image: url(../../assets/gif/cintas.gif);
+  /* background-image: url("../../assets/gif/cascada.gif"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  /* cursor: url(""); */
+}
+
+.p_none {
+  display: none;
+}
+/* *menu-hamburguesa  ********************************************************************/
+
+.header {
+  position: sticky;
+  z-index: 997;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--black-transparent);
+  color: var(--main-color);
+}
+
+.header h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section {
+  padding: 2rem;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.panel {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+  overflow-y: auto;
+  /* background-color: var(--second-modal-color); */
+  /* background-color: rgba(0, 0, 0, 0.618); */
+  /* opacity: 0; */
+  visibility: hidden;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  /* De arriba */
+  /* transform: translate(0, -100%);
+    /* De abajo */
+  /* transform: translate(0, 100%); */
+  /* De la derecha */
+  /* transform: translate(100%, 0); */
+  /* De la izquierda */
+  /* transform: translate(-100%, 0);  */
+}
+
+.panel.is-active {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible; /*permite que se vuelva visible nuevamente el panel*/
+}
+
+.panel-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+.panel-btn:hover {
+  background-color: var(--second-color);
+}
+
+.menu {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: left;
+  /* background-color: var(--black-transparent); */
+  height: 100%;
+}
+
+.menu a {
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: left;
+  /* color: var(--main-color); */
+  color: white;
+  transition: all 0.3s ease;
+  background-color: var(--black-transparent);
+}
+
+.menu a:hover {
+  font-weight: bold;
+  /* color: var(--second-color); */
+  color: #000;
+  background-color: var(--main-modal-color);
+}
+
+/* *EVENTOS DEL TECLADO  *****************************************************************/
+.stage {
+  display: flex;
+  min-height: 50vh;
+  /* background-color: var(--black-transparent); */
+  background-image: url("../../assets/gif/mario.gif");
+  border-radius: 3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* la pelota realmente es un cuadrado con bordes redondeados: */
+.ball {
+  margin: auto;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  /* background-color: var(--main-color); */
+  background-image: url("../../assets/gif/earth.gif");
+  background-size: cover;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed; */
+  background-position: center;
+  /* background-color:rgba(247,222,30,0.85); */
+}
+
+/* *Scroll TopButton  ********************************************************************/
+
+.scroll-top-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  left: calc(
+    4.25rem + 1vw
+  ); /*Esto separa los dos botones , calc permite realizar opereciones en css */
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  cursor: pointer; /*hace que aparezca el cursor cuando se posa sobre el botón*/
+  outline: 0; /* quita la linea del borde externo del botón*/
+  border: 0;
+  transition: all 0.3s ease-out; /*tardanza para que haga la transicion el boton*/
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+/* La clase hidden permite que no sea visible, al quitarsela dinamicamente vuelve a ser visible */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* *DarkThemeButton  *********************************************************************/
+.whatsapp {
+  position: fixed;
+  z-index: 999;
+  left: 1vw;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  /* bottom: 30px; */
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  /* left: 30px;
+  z-index: 100; */
+  background-image: url("../../assets/images/whatsapp2.JPG");
+  background-size: cover;
+  border-radius: 50%;
+  align-items: buttom;
+}
+
+.iconWhatsApp {
+  position: absolute;
+  right: 50px;
+}
+
+.dark-theme-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  left: 1vw; /*Esto separa los dos botones , calc permite realizar opereciones en css */
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  cursor: pointer; /*hace que aparezca el cursor cuando se posa sobre el botón*/
+  outline: 0; /* quita la linea del borde externo del botón*/
+  border: 0;
+  transition: all 0.3s ease-out; /*tardanza para que haga la transicion el boton*/
+}
+
+.dark-theme-btn:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.dark-mode {
+  background-color: var(--third-color);
+  color: var(--main-color);
+  background-image: url("https://usagif.com/wp-content/uploads/gif/outerspace-18.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* *Network Status  **********************************************************************/
+
+.online,
+.offline {
+  position: sticky; /* la posicion sticky es pegajoso. se queda en esa parte de la pantalla */
+  top: 0;
+  z-index: 1000;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+.offline {
+  background-color: #b71c1c;
+}
+
+/* *SearchFilters   TARJETAS DE IMÁGENES  ************************************************/
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* esta propiedad
+     grid-template-columns: es la propiedad que permite definir las columnas, 
+     en repeat el primer parametro es la cantidad de columnas, el segundo es la 
+     dimension de las columnas, autoo-fit es que se ajuste a la cantidad de hijos de
+     el grid, el minmax permite que se ajuste entre el tamaño minimo y el maximo al estilo 
+     responsive.
+     */
+}
+
+.card {
+  background-color: var(--second-color);
+  color: var(--main-color);
+  transition: all 0.3s ease-out;
+  padding: 1rem 0;
+}
+
+.card img {
+  width: 100%;
+  /* height: auto; */
+  height: 80%;
+}
+
+.card figcaption {
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.card a {
+  text-decoration: none;
+}
+.filter {
+  /* display: none; */ /*  esto quita los elementos de la interfaz grafica.. se crecen por la propiedad min-max*/
+  visibility: hidden; /* mientras que estas dos solo ocultan, pero quedan los espacios en blanco*/
+  opacity: 0;
+  order: 1; /* como el grid aplica esta propiedad order:0 al aplicar order:1 las tarjetas se van a acomodar. */
+}
+.p_card {
+  margin: 1px;
+}
+/* *RESPONSIVE SLIDER  *******************************************************************/
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: 1rem auto; /* un rem a ambos lados automatico */
+  text-align: center;
+}
+
+.slider-slides {
+  position: relative;
+  height: 400px;
+}
+
+.slider-slide {
+  position: absolute; /* esto es lo que hace que queden una sobre otra, ya que la posicion absuluta cuelga de la posicion relativa mas cecana*/
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden; /* oculta la visibilidad de los slide*/
+  transition: opacity 1s ease; /*  efecto de opacidad de un segundo */
+}
+
+.slider-slide img {
+  height: inherit; /* inherit significa que la erede del padre*/
+  width: inherit; /* inherit significa que la erede del padre*/
+  /*object-fit: contain; */ /*se adapta la imagen al alto de su contenedor evitando que se estire*/
+  object-fit: cover; /* adapta al ancho del contenedor la imagen, puede quedar cortada pero no se deforma*/
+  /* object-position: 50% 0%;  */
+  /* Mueve la imagen haciendo que se vea en la posicion de la parte superior */
+}
+
+.slider-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slider-btns {
+  position: absolute; /* cuelga de la posicion relativa padre mas proxima */
+  top: 50%; /* se acomoda a la altura del 50% */
+  width: 80%; /* los botones ocuparan el 100% del espacio de su contenedor */
+  display: flex; /* agrupa de forma horizontal los botones, en inline seria de forma vertical */
+  justify-content: space-between;
+  font-size: 3rem; /* fonde de letra  */
+  font-weight: bold; /* fonde de letra en negrita */
+  margin: 0 10%;
+}
+
+.slider a {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: thin solid white;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.slider a:hover {
+  color: var(--main-color);
+}
+
+/* *@media screen  ***********************************************************************/
+/* C  */
+
+@media screen and (min-width: 1024px) {
+  /* @media screen and (min-height: 740px) { */
+  /* La minima anchura del body va a ser de 1024 hacia arriba  */
+  body {
+    display: grid; /* C el grid divide la pantalla en secciones de porcentaje, en este caso el padre es el body  */
+    grid-template-columns: 80% 20%; /* C  1 columna de 80 y otra de 20*/
+    grid-template-rows: 4rem auto; /* C  definimos las filas, la primera de 4 rem y la otra automatica*/
+    grid-template-areas:
+      "header header"
+      "main panel"; /* C  aqui estamos acomodando los elementos en las columnas y filas, como el ejemplo de los cuadritos de excell.*/
+    /* C El header estara en la primera fila ocupando las 2 columnas y en la segunda fila estaran el main y el panel, el main con 4 rem y el panel auto */
+    /* C  cada entrecomillado es una fila*/
+  }
+
+  /* *ScrollSpy  ***************************************************************************/
+  main {
+    grid-area: main; /* C  esta palabra main es la que esta mas arriba en grid-template-areas, osea es una referencia con el mismo nombre*/
+  }
+
+  .header {
+    grid-area: header; /* C   /* C  esta palabra main es la que esta mas arriba en grid-template-areas, osea es una referencia con el mismo nombre*/
+  }
+
+  .panel {
+    grid-area: panel;
+    align-self: start; /* C  alinea al inicio de donde empieza la celda el contenido */
+    position: sticky; /* C  QUEDA pegado*/
+    top: 4rem; /* C   tiene la misma medida de la cabezera o header*/
+    justify-content: flex-start; /* C  para que su contenido osea los enlaces empiecen al inicio*/
+    /* background-color: rgba(0, 0, 0, 0.618); */
+    transform: translate(0, 0);
+    opacity: 1; /* C estas propiedaes opaciy y visibility  se copiaron de el panel inicial para siga pareciendose  */
+    visibility: visible;
+    overflow-y: auto;
+    height: max-content;
+  }
+
+  .panel-btn {
+    display: none; /*// C   con esta linea hacemos que no se muestre el panel btn cuando este en esta resolucion de pantalla*/
+  }
+
+  .menu {
+    justify-content: start;
+    text-align: right; /* C  alinea el texto a la derecha en el menu*/
+  }
+
+  .menu a {
+    padding: 0.9rem;
+    font-size: 1rem; /* C  modifica el tamaño del texto*/
+  }
+
+  .menu a:hover, /* C  modifica cuando se pone el cursor sobre */
+  /* C  tambien va a plicar estos estilos cuando el scroll este dando la clase active,sig línea.*/
+  .menu a.active {
+    color: var(--second-color);
+    background-color: var(--main-color);
+  }
+
+  .scroll-top-btn {
+    /* C  la flechita que va y lleva hacia arriba */
+    right: initial;
+    right: 1vw;
+  }
+}
+
+@media screen and (max-height: 875px) {
+  .menu a {
+    padding: 0.6rem;
+  }
+}
+@media screen and (max-height: 740px) {
+  .menu a {
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-height: 650px) {
+  .menu a {
+    padding: 0.3rem;
+  }
+}
+@media screen and (max-height: 580px) {
+  .menu a {
+    padding: 0.25rem;
+  }
+}
+@media screen and (max-height: 530px) {
+  .menu a {
+    padding: 0.1rem;
+  }
+}
+@media screen and (max-height: 461px) {
+  .menu a {
+    padding: 0rem;
+  }
+}
+/* *ContactForm Validations  *************************************************************/
+
+.contact-form {
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+/* el asterisco significa todos : en la sig linea dice a todos los elementos que son hijos directos del formulario de contacto*/
+/* .contact-form > * { */
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+  background-color: rgba(181, 181, 211, 0.407);
+  color: white;
+  font-weight: bold;
+  border-radius: 3rem;
+  padding: 0.5rem 2rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--main-color);
+}
+
+/* elimina el triangulito de la esquina para que no se pueda redimensionar el text area */
+.contact-form textarea {
+  resize: none;
+}
+
+/*  le damos estilos a los títulos */
+.contact-form legend,
+.contact-form-response {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* con esto estandarizamos el tipo de letra en todos los input y text area ya que la letra sale diferente. */
+.contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+/* personalizamos el boton de enviar */
+.contact-form input[type="submit"] {
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* a todos los elementos del formulario que tengan el atributo placeholder aplicarle: */
+.contact-form *::placeholder {
+  color: #000;
+}
+
+/*! LO SIGUIENTE CAMBIARA EL COLOR DE LOS RECUADROS SEGUN SU VALIDEZ */
+/* cuando un elemento del .contact-form tenga el atributo required y este sea igual a valid */
+.contact-form [required]:valid {
+  border: thin solid var(--form-ok-color);
+}
+/* cuando un elemento del .contact-form tenga el atributo required y este sea igual a invalid */
+.contact-form [required]:invalid {
+  border: thin solid var(--form-error-color);
+}
+
+.contact-form-error {
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+/* lo que tenga esta clase no se va a mostrar */
+.none {
+  display: none;
+}
+
+.adjust {
+  width: 85%;
+}
+
+select option {
+  color: white;
+  margin-top: 5px;
+  background-color: var(--black-transparent);
+}
+
+/* *IFRAME RESPONSIVO  *******************************************************************/
+
+.iframe-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div-iframe {
+  position: relative; /* Lo estamos estableciendo en una posición relativa para que después podamos posicionar nuestro iframe en relación con el div. */
+  overflow: hidden; /* para ocultar cualquier elemento que pueda ser colocado fuera del contenedor. */
+  padding-top: 56.25%; /* la propiedad apadding-top puede recibir un porcentaje, esto es lo que mantiene nuestro iframe a la proporción correcta.  */
+  width: 100%;
+  height: 100%;
+  margin: 2rem 5%;
+}
+
+.iframe-responsivo {
+  position: absolute; /* le dará al iframe una posición relativa a la envoltura y la dejará posicionarse sobre el relleno del envoltorio. */
+  top: 0; /* para colocar el iframe en el centro del contenedor. */
+  left: 0; /* para colocar el iframe en el centro del contenedor. */
+  width: 100%; /* para que el iframe tome todo el espacio del div. */
+  height: 100%; /* para que el iframe tome todo el espacio del div. */
+  border: 0;
+}
+
+/* *Animacion del texto en el Header  ****************************************************/
+
+/* empiza con el 0% y va aumentando hasta el 100% como un control de tiempo, en este caso empiza invisible y se va mostrando gradualmente. */
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.header {
+  text-align: center;
+  overflow: hidden; /* Oculta el texto que se desplaza fuera del contenedor */
+}
+
+.animated-text {
+  display: inline-block;
+  white-space: nowrap; /* Evita el salto de línea */
+  animation: slideLeft 18s linear infinite; /* Aplica la animación */
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%); /* Comienza desde la derecha */
+  }
+  100% {
+    transform: translateX(-100%); /* Termina en la izquierda */
+  }
+}
+
+/* *animacion de girar y rotar  *********************************************************/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1200px; /* Ajusta la perspectiva 3D */
+}
+
+.girar {
+  background-size: cover;
+  border-radius: 20rem;
+  transform-style: preserve-3d;
+  animation: spin 2s linear infinite; /* Animacion para girar*/
+}
+
+.rotar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: white;
+  animation: rotateText 20s linear infinite; /* Animación de rotación del texto */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* *EFECTO DE REVOTE:  *******************************************************************/
+
+@keyframes rebote {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px); /* Rebote hacia arriba */
+  }
+  60% {
+    transform: translateY(-15px); /* Rebote hacia abajo */
+  }
+}
+
+.rebotar {
+  /* animation: rebote 1s ease 3; */
+  animation: rebote 1s linear infinite;
+}
+
+/* *Estilos de el modal para explicar  ***************************************************/
+
+.BModal {
+  background-color: transparent;
+  color: #77bef5;
+  border-radius: 50%;
+}
+.BModal:hover {
+  background-color: #77bef5;
+  color: #000;
+}
+.modal-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para el modal */
+.modal-content {
+  background-color: rgb(31, 28, 28);
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.AModal {
+  color: white;
+}
+
+/* *Aspectos generales  ******************************************************************/
+
+#DivNarrador {
+  background-color: var(--black-transparent);
+  border-radius: 3rem;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+#DivNarrador textarea::placeholder {
+  color: var(--main-color);
+}
+
+#countdown {
+  font-size: 5vh;
+}
+
+#mapaMundi {
+  border-radius: 50%;
+  width: 20vh;
+}
+
+#camara,
+#celular,
+#detector,
+#internet,
+#sorteo,
+#reloj1,
+#reloj2 {
+  font-size: 5rem;
+  margin: 0 0;
+}
+#sonriza {
+  width: 5rem;
+}
+/* #videoInteligente {
+  height: 60vh;
+} */
+#speech-select {
+  width: 100%;
+  border-radius: 2rem;
+  background-color: rgba(181, 181, 211, 0.407);
+  color: var(--main-color);
+}
+
+#speech-btn {
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
+}
+#speech-text {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 2rem;
+  background-color: rgba(181, 181, 211, 0.407);
+  color: white;
+}
+
+.gif {
+  width: 15vh;
+}
+.emoticon {
+  display: inline-flex;
+  text-align: center;
+  margin-bottom: 2px;
+}
+.mgc {
+  margin: 0 5px 2px 0;
+}
+.clean-ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.players {
+  list-style: none;
+  padding-left: 30%;
+}
+.players li {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+#reloj {
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 3rem;
+}
+
+#tv {
+  font-size: 200%;
+}
+
+.transparent-input {
+  background-color: rgba(181, 181, 211, 0.407);
+  color: white;
+  width: 50%;
+  margin: 5px;
+  border-radius: 3rem;
+  padding-left: 1rem;
+}
+
+.transparent-input::placeholder {
+  color: var(--main-color);
+  padding: 0 1rem;
+}
+
+#speech-text::placeholder {
+  color: white;
+}
+
+.blue-btn,
+#send-blue,
+#winner-btn {
+  border-radius: 2rem;
+  background-color: var(--main-color);
+  height: 3rem;
+  padding: 0 1rem;
+}
+
+.blue-btn:hover,
+#send-blue:hover,
+#winner-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.blue-link {
+  background-color: var(--main-color);
+  border-radius: 2rem;
+  font-weight: bold;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+.blue-link:hover {
+  background-color: white;
+}
+
+img,
+video {
+  max-width: 90%;
+  height: auto;
+}
+
+.textBox {
+  background-color: var(--black-transparent);
+  border-radius: 3rem;
+  padding: 10px;
+  margin: 5px;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
