@@ -329,27 +329,35 @@ body {
      */
 }
 
-.card {
+.card,
+.cardConsole,
+.cardAccesorio {
   background-color: var(--second-color);
   color: var(--main-color);
   transition: all 0.3s ease-out;
   padding: 1rem 0;
 }
 
-.card img {
+.card img,
+.cardConsole img,
+.cardAccesorio img {
   width: 100%;
   /* height: auto; */
   height: 80%;
 }
 
-.card figcaption {
+.card figcaption,
+.cardConsole figcaption,
+.cardAccesorio figcaption {
   color: #fff;
   font-size: 1rem;
   padding: 5px;
   font-weight: bold;
 }
 
-.card a {
+.card a,
+.cardConsole a,
+.cardAccesorio a {
   text-decoration: none;
 }
 .filter {

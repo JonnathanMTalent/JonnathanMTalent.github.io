@@ -31,6 +31,8 @@ d.addEventListener("DOMContentLoaded", (e) => { // esto permite que cargue el do
     );
     getGeolocation("geolocation");
     searchFilters(".card-filter", ".card");
+    searchFilters(".card-filterConsole", ".cardConsole");
+    searchFilters(".card-filterAccesorios", ".cardAccesorio");
     slider();
     scrollSpy();
     // smartVideo(); // En este caso no damos parametros porque vamos a usar el data-atribute.
